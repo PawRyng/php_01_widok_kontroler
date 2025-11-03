@@ -10,5 +10,6 @@ require_once dirname(__FILE__).'/config.php';
 </head>
 <body>
     <a href="<?= _CALC_PATH ?>">Kalkulator</a>
+    <a href="<?= _CREDIT_PATH ?>">Kredyt</a>
 </body>
 </html>
