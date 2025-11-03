@@ -1,6 +1,6 @@
 <?php
 // KONTROLER strony kalkulatora
-require_once dirname(__FILE__).'/../config.php';
+require_once dirname(__FILE__).'/config.php';
 
 // W kontrolerze niczego nie wysyła się do klienta.
 // Wysłaniem odpowiedzi zajmie się odpowiedni widok.
@@ -8,9 +8,9 @@ require_once dirname(__FILE__).'/../config.php';
 
 // 1. pobranie parametrów
 
-$x = $_REQUEST ['x'];
-$y = $_REQUEST ['y'];
-$operation = $_REQUEST ['op'];
+$x = isset( $_REQUEST['x']) ? $_REQUEST['x'] : "";
+$y = isset( $_REQUEST['y']) ? $_REQUEST['y'] : "";
+$operation = isset( $_REQUEST['op']) ? $_REQUEST['op'] : "";
 
 // 2. walidacja parametrów z przygotowaniem zmiennych dla widoku
 

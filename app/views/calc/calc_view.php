@@ -1,4 +1,4 @@
-<?php require_once dirname(__FILE__) .'/../config.php';?>
+<?php require_once dirname(__FILE__) .'/config.php';?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 <head>
@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="<?php print(_APP_URL);?>/app/calc.php" method="post">
+<form action="<?=_APP_URL?>/calc.php" method="post">
 	<label for="id_x">Liczba 1: </label>
 	<input id="id_x" type="text" name="x" value="<?= $x ?? '' ?>" /><br />
 	<label for="id_op">Operacja: </label>
