@@ -7,7 +7,8 @@ require_once dirname(__FILE__).'/config.php';
 // Parametry do widoku przekazujemy przez zmienne.
 
 // 1. pobranie parametrów
-
+session_start();
+$role = $_SESSION['role'] ?? '';
 $x = isset( $_REQUEST['x']) ? $_REQUEST['x'] : "";
 $y = isset( $_REQUEST['y']) ? $_REQUEST['y'] : "";
 $operation = isset( $_REQUEST['op']) ? $_REQUEST['op'] : "";
@@ -56,6 +57,10 @@ if (empty ( $messages )) { // gdy brak błędów
 			$result = $x - $y;
 			break;
 		case 'times' :
+			if($role !== 'admin') {
+				$messages [] = 'Brak uprawnień do wykonywania mnożenia';
+				break;
+			}
 			$result = $x * $y;
 			break;
 		case 'div' :
