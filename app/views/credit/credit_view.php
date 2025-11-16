@@ -5,6 +5,7 @@
 <title>Kalkulator</title>
 </head>
 <body>
+	<?php require_once dirname(__FILE__).'/../../component/menu.php'; ?>
 <form action="/app/views/credit/calc.php" method="post">
 	<label for="id_x">Kwota: </label>
 	<input id="id_x" type="number" name="amount" value="<?= $amount ?? '' ?>" /><br />
