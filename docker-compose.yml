@@ -8,3 +8,12 @@ services:
     volumes:
       - ./:/var/www/html:rw
     restart: unless-stopped
+  composer:
+    build:
+      context: .
+      dockerfile: Dockerfile.composer
+    container_name: php_composer
+    volumes:
+      - ./:/var/www/html:rw
+    working_dir: /var/www/html
+    entrypoint: ["composer"]
