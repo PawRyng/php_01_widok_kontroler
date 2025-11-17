@@ -6,8 +6,9 @@
 <title>Kalkulator</title>
 </head>
 <body>
-
+<?php require_once dirname(__FILE__).'/../../component/menu.php'; ?>
 <form action="<?=_APP_URL?>/calc.php" method="post">
+	<a href="/app/views/security/logout.php">Wyloguj</a>
 	<label for="id_x">Liczba 1: </label>
 	<input id="id_x" type="text" name="x" value="<?= $x ?? '' ?>" /><br />
 	<label for="id_op">Operacja: </label>

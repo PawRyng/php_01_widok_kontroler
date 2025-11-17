@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'/config.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,6 @@ require_once dirname(__FILE__).'/config.php';
     <title>Menu</title>
 </head>
 <body>
-    <a href="<?= _CALC_PATH ?>">Kalkulator</a>
-    <a href="<?= _CREDIT_PATH ?>">Kredyt</a>
+    <?php require_once dirname(__FILE__).'/app/component/menu.php'; ?>
 </body>
 </html>
