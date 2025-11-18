@@ -22,8 +22,17 @@
         <input type="submit" value="Oblicz" />
     </form>
 
-    {% if result is not null %}
-        <h4>Odsetki: {{ result }}</h4>
+    {% if monthlyPayment is not null %}
+        <h4>Odsetki: {{ monthlyPayment }}</h4>
+    {% endif %}
+
+    {% if errors is not empty %}
+        <h4>Wystąpiły błędy:</h4>
+        <ol>
+        {% for e in errors %}
+            <li>{{ e }}</li>
+        {% endfor %}
+        </ol>
     {% endif %}
 
 </body>

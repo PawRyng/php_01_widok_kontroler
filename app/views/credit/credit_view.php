@@ -11,8 +11,9 @@ if (isset($twig) && $twig instanceof \Twig\Environment) {
 		'amount' => $amount ?? '',
 		'years' => $years ?? '',
 		'interest' => $interest ?? '',
-		'result' => $result ?? null,
+		'monthlyPayment' => $monthlyPayment ?? null,
 		'menu' => $menu,
+		'errors' => $errors ?? null,
 	]);
 
 } else {
